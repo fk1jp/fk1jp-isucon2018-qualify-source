@@ -30,3 +30,20 @@
     dest: /home/isucon/.bash_profile
     content: |
       export PATH=/home/isucon/local/ruby/bin:$PATH
+
+- name: Uninstall Ruby 2.0.2
+  become: yes
+  become_user: isucon
+  when: ruby_version_output is failed or ruby_version_output.stdout != "2.5.1"
+  args:
+    chdir: /home/isucon
+  shell: bash -lc 'yes Y | gem uninstall bundler -v 2.0.2'
+
+- name: Install bundle 1.16.4
+  become: yes
+  become_user: isucon
+  when: ruby_version_output is failed or ruby_version_output.stdout != "2.5.1"
+  args:
+    chdir: /home/isucon
+  shell: bash -lc 'gem install bundler -v 1.16.4'
+
