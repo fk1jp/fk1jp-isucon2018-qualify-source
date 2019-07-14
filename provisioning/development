@@ -1,18 +1,22 @@
 [portal_web]
 # ポータルをデプロイするサーバ
-
+server04
 
 [bench]
 # ベンチマーカをデプロイするサーバ
-
+server04
 
 [webapp1]
 # 競技用webappをデプロイするサーバ(1)
-
+server01
 
 [webapp2]
 # 競技用webappをデプロイするサーバ(2)
-
+server02
 
 [webapp3]
 # 競技用webappをデプロイするサーバ(3)
+server03
+
+[all:vars]
+ansible_ssh_user=centos

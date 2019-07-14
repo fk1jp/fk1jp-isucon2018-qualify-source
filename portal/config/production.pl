@@ -3,7 +3,7 @@ use warnings;
 use Time::Moment;
 my $database  = $ENV{ISUCON8_DATABASE}  || 'isucon8_portal';
 my $start_at  = $ENV{ISUCON8_START_AT}  || '2018-09-15T10:00:00+09:00';
-my $finish_at = $ENV{ISUCON8_FINISH_AT} || '2018-09-15T18:00:00+09:00';
+my $finish_at = $ENV{ISUCON8_FINISH_AT} || '2022-09-15T18:00:00+09:00';
 
 # 9/15
 # my $manual_url  = 'https://gist.github.com/rkmathi/04d02d5fd95ddcf2a9d59ae2b5d79432';
