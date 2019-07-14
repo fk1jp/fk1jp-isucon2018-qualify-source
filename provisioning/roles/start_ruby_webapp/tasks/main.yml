@@ -17,11 +17,11 @@
     daemon_reload: yes
     enabled: yes
 
-#- name: systemd restart torb.perl
-#  become: yes
-#  become_user: root
-#  systemd:
-#    name: torb.perl
-#    state: restarted
-#    daemon_reload: yes
-#    enabled: yes
+- name: systemd restart torb.ruby
+  become: yes
+  become_user: root
+  systemd:
+    name: torb.ruby
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
